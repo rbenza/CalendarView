@@ -14,9 +14,9 @@ internal fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean 
     return LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
 }
 
-internal inline fun Boolean?.orFalse(): Boolean = this ?: false
+internal fun Boolean?.orFalse(): Boolean = this ?: false
 
-internal inline fun Int?.orZero(): Int = this ?: 0
+internal fun Int?.orZero(): Int = this ?: 0
 
 val LocalDate.yearMonth: YearMonth
     get() = YearMonth.of(year, month)

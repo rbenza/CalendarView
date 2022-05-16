@@ -32,7 +32,9 @@ internal data class ViewConfig(
 internal class CalendarAdapter(
     private val calView: CalendarView,
     internal var viewConfig: ViewConfig,
-    internal var monthConfig: MonthConfig
+    internal var monthConfig: MonthConfig,
+    internal var dayState: CalendarDayState
+
 ) : RecyclerView.Adapter<MonthViewHolder>() {
 
     private val months: List<CalendarMonth>
@@ -113,13 +115,8 @@ internal class CalendarAdapter(
                 bottomMargin = calView.monthMarginBottom
                 topMargin = calView.monthMarginTop
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    marginStart = calView.monthMarginStart
-                    marginEnd = calView.monthMarginEnd
-                } else {
-                    leftMargin = calView.monthMarginStart
-                    rightMargin = calView.monthMarginEnd
-                }
+                marginStart = calView.monthMarginStart
+                marginEnd = calView.monthMarginEnd
             }
         }
 
