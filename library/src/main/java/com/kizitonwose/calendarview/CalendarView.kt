@@ -714,7 +714,7 @@ open class CalendarView : RecyclerView {
         }
     }
 
-    private fun finishSetup(monthConfig: MonthConfig, calendarDayState: CalendarDayState) {
+    private fun finishSetup(monthConfig: MonthConfig) {
         removeOnScrollListener(scrollListenerInternal)
         addOnScrollListener(scrollListenerInternal)
 
@@ -723,7 +723,7 @@ open class CalendarView : RecyclerView {
             this,
             ViewConfig(dayViewResource, monthHeaderResource, monthFooterResource, monthViewClass),
             monthConfig,
-            calendarDayState
+
         )
     }
 

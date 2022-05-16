@@ -33,7 +33,6 @@ internal class CalendarAdapter(
     private val calView: CalendarView,
     internal var viewConfig: ViewConfig,
     internal var monthConfig: MonthConfig,
-    internal var dayState: CalendarDayState
 
 ) : RecyclerView.Adapter<MonthViewHolder>() {
 
