@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
-apply from: rootProject.file("dependencies.gradle")
+//apply plugin: 'com.github.dcendents.android-maven'
+apply from: rootProject.file("CalendarView/dependencies.gradle")
 
 group='com.github.kizitonwose'
 def artifact = 'CalendarView'
