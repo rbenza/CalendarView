@@ -664,7 +664,6 @@ open class CalendarView : RecyclerView {
         startMonth: YearMonth,
         endMonth: YearMonth,
         firstDayOfWeek: DayOfWeek,
-        calendarDayState: CalendarDayState
     ) {
         configJob?.cancel()
         this.startMonth = startMonth
@@ -674,7 +673,7 @@ open class CalendarView : RecyclerView {
             MonthConfig(
                 outDateStyle, inDateStyle, maxRowCount, startMonth,
                 endMonth, firstDayOfWeek, hasBoundaries, Job()
-            ), calendarDayState
+            )
         )
     }
 
